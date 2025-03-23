@@ -158,10 +158,9 @@ async def format_message(link_data):
     file_size = await get_formatted_size_async(link_data["size"])
     download_link = link_data["dlink"]
     sk = {
-      'Title': file_name,
-      'Size': file_size,
-      'Direct Download Link': download_link,
-      'Thumbnails': thumbnails
+    
+      
+      'Direct Download Link': download_link      
     }
     return sk
 
