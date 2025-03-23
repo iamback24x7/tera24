@@ -158,9 +158,9 @@ async def format_message(link_data):
     file_size = await get_formatted_size_async(link_data["size"])
     download_link = link_data["dlink"]
     sk = {
-    
       
-      'Direct Download Link': download_link      
+      'Direct Download Link': download_link
+   
     }
     return sk
 
@@ -184,7 +184,7 @@ async def Api():
           logging.info(f"Formatted message: {formatted_message}")
       else:
           formatted_message = None
-      response = { 'Extracted Info': formatted_message'}
+      response = { 'ShortLink': url, 'Extracted Info': formatted_message,'status': 'success'}
       return jsonify(response)
   except Exception as e:
       logging.error(f"An error occurred: {e}")
