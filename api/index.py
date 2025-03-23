@@ -184,7 +184,7 @@ async def Api():
           logging.info(f"Formatted message: {formatted_message}")
       else:
           formatted_message = None
-      response = { 'ShortLink': url, 'Extracted Info': formatted_message,'status': 'success'}
+      response = { 'Extracted Info': formatted_message'}
       return jsonify(response)
   except Exception as e:
       logging.error(f"An error occurred: {e}")
